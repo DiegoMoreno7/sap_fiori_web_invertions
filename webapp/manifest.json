@@ -79,21 +79,50 @@
               "viewPath": "com.inv.sapfioriwebinvertions.view"
           },
           "routes": [
-              {
-                  "name": "RouteMain",
-                  "pattern": "home",
-                  "target": [
-                      "TargetMain"
-                  ]
-              }
-          ],
+                { 
+                    "name": "RouteLogin", 
+                    "pattern": "login", 
+                    "target": "TargetLogin" 
+                },
+                {
+                "name": "RouteMain",
+                "pattern": "home",
+                "target": ["TargetMain"]
+                },
+                {
+                "name": "RouteSalesForecast",
+                "pattern": "salesforecast",
+                "target": ["TargetSalesForecast"]
+                }
+            ],
           "targets": {
-              "TargetMain": {
-                  "id": "Main",
-                  "name": "Main",
-                  "viewlevel":1
-              }
-          }
+                "TargetLogin": {
+                "viewId": "Login",
+                "viewName": "Login",
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewlevel": 1
+                },
+                "TargetMain": {
+                "viewId": "Main",
+                "viewName": "Main",
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewlevel": 2
+                },
+                "TargetSalesForecast": {
+                "viewId": "SalesForecast",
+                "viewName": "SalesForecast",
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewlevel": 3,
+                "path": "com.inv.sapfioriwebinvertions.view.salesforecast",
+                "viewPath": "com.inv.sapfioriwebinvertions.view.salesforecast"
+                }
+            }
       },
       "rootView": {
           "viewName": "com.inv.sapfioriwebinvertions.view.App",
